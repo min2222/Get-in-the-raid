@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.AbstractIllager;
+import net.minecraft.world.entity.raid.Raider;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(modid = Getintheraid.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EventHandlerForge
 {
 	public static final List<EntityType<?>> RAIDER_LIST = new ArrayList<>();
@@ -15,7 +17,7 @@ public class EventHandlerForge
 	@SubscribeEvent
 	public static void entityJoin(EntityJoinLevelEvent event)
 	{
-		if(AbstractIllager.class.isInstance(event.getEntity()))
+		if(Raider.class.isInstance(event.getEntity()))
 		{
 			RAIDER_LIST.add(event.getEntity().getType());
 		}
