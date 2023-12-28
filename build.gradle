@@ -22,7 +22,7 @@ apply plugin: 'maven-publish'
 
 version = '1.0.0'
 group = 'com.min01.getintheraid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'Get in the Raid!'
+archivesBaseName = 'Get in the raid!'
 
 mixin {
     add sourceSets.main, "getintheraid.mixin-refmap.json"
