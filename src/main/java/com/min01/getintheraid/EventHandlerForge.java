@@ -15,7 +15,7 @@ public class EventHandlerForge
 	public static final List<EntityType<?>> RAIDER_LIST = new ArrayList<>();
 	
 	@SubscribeEvent
-	public static void entityJoin(EntityJoinLevelEvent event)
+	public static void onEntityJoinLevel(EntityJoinLevelEvent event)
 	{
 		if(Raider.class.isInstance(event.getEntity()))
 		{
